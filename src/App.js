@@ -15,7 +15,7 @@ class App extends Component {
       <div className="App">
         <h1>react/redux </h1>
         <UserInput />
-        <Counter onIncrement={() => store.dispatch({ type: 'INCREMENT' })}/>
+        <Counter value = {store.getState().counter}/>
       </div>
       </Provider>
     );

@@ -1,16 +1,23 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import store from '../store'
 
-class Counter extends React.Component {
-  render() {
-    const { onIncrement, value } = this.props
-    console.log(onIncrement)
+const Counter = ({dispatch, value, onClick}) => {
     return (
       <div>
         <span>{value}</span>
-        <button onClick={onIncrement}>click me pleazz</button>
+        <button onClick={onClick}>click me pleazz</button>
       </div>
     )
-  }
+
+}
+const mapStateToProps = state => {
+  return {
+    value: state.counter}
 }
 
-export default Counter
+const mapDispatchToProps = dispatch => ({
+  onClick: () => store.dispatch({type: "INCREMENT"})
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(Counter)
