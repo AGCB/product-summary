@@ -7,5 +7,5 @@
 3. `yarn start` to run the application locally
 
 
-#### todos
-- I broke the promo code reducer as I was cleaning up files at the last minute so toggles aren't working correctly.
+#### left incomplete.
+- unit testing
