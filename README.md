@@ -9,3 +9,6 @@
 
 #### left incomplete.
 - unit testing
+- limit discounting to single use.
+
+###### coded with 💟 by Alex
