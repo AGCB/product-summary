@@ -1,8 +1,13 @@
-const todos = (state=[], action) => {
+const pricing = (state=[], action) => {
   switch(action.type) {
     case "APPLY_PROMO_CODE":
       if(action.code === "DISCOUNT") {
-        return state;
+        return {
+          ...state,
+          subTotal: state.subTotal * .9,
+          total: state.total * .9
+
+        }
       }
       else {
         return state;
@@ -12,4 +17,4 @@ const todos = (state=[], action) => {
   }
 }
 
-export default todos
+export default pricing
