@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux'
-import todos from './todos'
-import counter from './counter'
+import pricing from './pricing'
+import toggleSavingsInfo from './toggleSavingsInfo';
+
 export default combineReducers({
-  todos,
-  counter
+  pricing,
+  toggleSavingsInfo
 })

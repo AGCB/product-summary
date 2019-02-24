@@ -1,32 +1,274 @@
 .App {
   text-align: center;
+  margin-bottom: 100px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pricing {
+  border: 1px solid rgba(200,200,200,0.5);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font-size: .6em;
+  width: 40%;
+  margin-left: 25%;
+  padding-right: 20px;
+  margin-bottom: 50px;
+}
+
+.pricing * {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 2px;
 }
 
-.App-link {
-  color: #61dafb;
+.subtotal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.savings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.taxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.total {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  font-size: 1.1em;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 500px) {
+  .pricing {
+    font-size: 13px;
+    width: 43%;
+    margin-left: 140px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 600px) {
+  .pricing {
+    width: 35%;
+    margin-left: 180px;
+    margin-right: 0px;
   }
+}
+
+@media screen and (min-width: 700px) {
+  .pricing {
+    width: 35%;
+    margin-left: 220px;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .pricing {
+    width: 35%;
+    margin-left: 270px;
+    margin-right: 0px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .pricing {
+    width: 26%;
+    margin-left: 320px;
+    margin-right: 0px;
+  }
+}
+
+
+@media screen and (min-width: 1000px) {
+  .pricing {
+    width: 25%;
+    margin-left: 380px;
+    margin-right: 0px;
+  }
+}
+
+
+@media screen and (min-width: 1100px) {
+  .pricing {
+    margin-left: 410px;
+    margin-right: 0px;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .pricing {
+    width: 20%;
+    margin-left: 37%;
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .pricing {
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 0px;
+  }
+  .see-promo-toggle {
+    margin-right: -13px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .pricing {
+    width: 45%;
+    margin-left: 30%;
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 358px) {
+  .pricing {
+    width: 50%;
+    margin-left: 30%;
+    margin-right: 0px;
+  }
+}
+
+hr {
+  background-color: #eee;
+  color: #eee;
+  border: 0 none;
+  height: 1px;
+}
+
+.modal {
+  font-size: 10px;
+  margin-top: 0%;
+  width: 150px;
+  margin-left: 40%;
+  position: absolute;
+  top: 125px;
+  left: -110px;
+  background: white;
+  border: 2px solid rgba(100,100,100,0.1);
+  }
+
+.hidden {
+  visibility: hidden;
+  margin-top: -90px;
+}
+.hidden-promo {
+  visibility: hidden;
+}
+.shown-promo {
+
+}
+
+@media screen and (max-width: 500px) {
+  .modal {
+    width: 28%;
+    margin-left: 50%;
+    margin-top: 0%;
+    min-width: 140px;
+  }
+}
+
+.see-item-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  min-width: 50%;
+  font-size: 10px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: -0px;
+}
+
+.bottom-margin {
+  margin-bottom: -20px;
+}
+
+.item-details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  margin-left: -20px;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.see-promo-code {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 10px;
+  margin-left: 88px;
+  min-width: 50%;
+}
+
+.see-promo-toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 10px;
+  margin-left: -60%;
+}
+
+.see-promo-code * {
+  margin: 0px 3px;
+}
+
+.promo-margin {
+  margin-top: -90px;
+}
+
+.promo-span {
+  font-size: 10px;
+  margin-left: 3%;
+  text-decoration: underline;
+  display: flex;
+  align-items: flex-center;
+}
+
+.myMargin {
+  text-decoration: underline;
+  margin-top: 10px;
+  margin-left: -102px;
+  margin-right: -10px;
+  min-width: 120px;
+  background-color: rgba(0,0,255,0.0);
+}
+
+.item-name {
+  max-width: 130px;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 500px) {
+  .item-name {
+    font-size: 10px;
+    min-width: 100px;
+  }
+
+  .promo-span {
+    margin-left: 13%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .promo-span {
+    margin-left: 16%;
+  }
+}
+
+img {
+  object-fit: contain;
+  min-width: 80px;
+  mix-blend-mode: multiply;
 }

@@ -1,13 +1,15 @@
-let nextTodoId = 0
+let savingsToggle = 0;
 
-export const addTodo = (text) => ({
-  type: "ADD_TODO",
-  id: nextTodoId++,
-  text
+export const toggleSavingsInfo = () => ({
+  type: "TOGGLE_SAVINGS_INFO",
+  toggleSavingsInfo: savingsToggle++ % 2
 })
 
-export const increment = () => ({
-  type: "INCREMENT"
+
+export const applyPromoCode = (code) => ({
+  type: "APPLY_PROMO_CODE",
+  code
 })
 
-export default addTodo
+
+export default toggleSavingsInfo;
