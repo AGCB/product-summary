@@ -4,6 +4,7 @@ import { applyPromoCode } from '../actions/'
 
 const UserInput = ({dispatch, promoToggle}) => {
   let input;
+  let discountApplied = false;
   return (
     <form
       onSubmit={e => {
@@ -11,15 +12,20 @@ const UserInput = ({dispatch, promoToggle}) => {
            if(!input.value.trim()) {
              return
            }
+           if(!discountApplied)
            dispatch(applyPromoCode(input.value))
            input.value = ''
+           discountApplied = true;
          }}
     className={promoToggle? "hidden-promo": "shown-promo"}
     >
-    <label style={{
+    <label
+      style={{
         marginLeft: "-45%",
         color: "rgba(0,0,0,0.65)"
-      }}>Promo code</label>
+      }}
+    >Promo code
+    </label>
       <div
         style={{
           display:"flex",

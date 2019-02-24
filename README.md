@@ -7,8 +7,6 @@
 3. `yarn start` to run the application locally
 
 
-#### left incomplete.
-- unit testing
-- limit discounting to single use.
+- boilerplate from [create-react-app](https://github.com/facebook/create-react-app)
 
 ###### coded with 💟 by Alex

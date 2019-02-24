@@ -6,7 +6,6 @@ const pricing = (state=[], action) => {
           ...state,
           subTotal: state.subTotal * .9,
           total: state.total * .9
-
         }
       }
       else {
